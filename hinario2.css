@@ -1,0 +1,119 @@
+/* 🎨 CSS: Estilização com as Cores Escolhidas */
+:root {
+    --cor-fundo-principal: #1B3C53; /* Azul Escuro Profundo */
+    --cor-destaque: #234C6A;        /* Azul Médio */
+    --cor-container-hino: #456882;  /* Azul Acinzentado Claro */
+    --cor-texto-claro: #E3E3E3;     /* Cinza Muito Claro */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-claro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-destaque);
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+/* Área de Seleção (Seletor) */
+.seletor {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebras de linha em telas menores */
+    gap: 10px 20px;
+    padding: 20px;
+    background-color: var(--cor-destaque);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seletor label {
+    font-weight: 600;
+}
+
+.seletor select, .seletor input[type="number"], .seletor button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+    color: var(--cor-fundo-principal); /* Texto escuro nos inputs claros */
+    background-color: var(--cor-texto-claro);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.seletor input[type="number"] {
+    width: 80px; /* Largura ajustada para o número */
+    text-align: center;
+}
+
+.seletor button {
+    background-color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.seletor button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+/* Área de Exibição do Hino (Display) */
+.hino-display {
+    background-color: var(--cor-container-hino);
+    padding: 35px;
+    border-radius: 10px;
+    min-height: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-size: 1.15em;
+    opacity: 0; /* Começa invisível para o efeito de transição */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hino-display.ativo {
+    opacity: 1; /* Classe para mostrar o conteúdo */
+}
+
+.hino-display h2 {
+    text-align: center;
+    color: var(--cor-texto-claro);
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(227, 227, 227, 0.5);
+    padding-bottom: 15px;
+    font-weight: 400;
+}
+
+/* Otimização para formatação de versos e estrofes */
+.hino-display pre {
+    white-space: pre-wrap; /* Essencial para respeitar o \n\n e \n */
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}

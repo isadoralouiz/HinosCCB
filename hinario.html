@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinário CCB</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hinário CCB</h1>
+    </header>
+
+    <div class="container">
+        
+        <div class="seletor">
+            <label for="hinario-select">Selecionar Hinário:</label>
+            <select id="hinario-select">
+                <option value="3">Hinário 3</option>
+                <option value="4" selected>Hinário 4 (1-450)</option>
+                <option value="5">Hinário 5 (1-481)</option>
+            </select>
+            
+            <label for="hino-number">Nº do Hino:</label>
+            <input type="number" id="hino-number" min="1" max="450" value="1">
+
+            <button id="buscar-hino">Buscar Hino</button>
+        </div>
+
+        <div class="hino-display ativo" id="hino-content">
+            <h2>Bem-vindo ao Hinário CCB</h2>
+            <p>Selecione o hinário e digite o número para visualizar a letra. Que a paz de Deus esteja com você!</p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
